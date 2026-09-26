@@ -1,0 +1,342 @@
+/* =========================================================
+   Hotel Pomelia — pagina di benvenuto (desktop)
+   Stile ripreso dal progetto Email Marketing: blu profondo,
+   ocra e bordi in maiolica di Caltagirone.
+   ========================================================= */
+
+:root {
+  --blu: #0E3D7A;          /* sfondo principale */
+  --blu-scuro: #0A2E5C;    /* fascia degli impegni */
+  --ocra: #E3A24F;         /* titoli e bottone principale */
+  --ocra-chiaro: #F0BE77;  /* hover del bottone */
+  --crema: #FAF5EC;        /* testi su blu */
+  --giallo: #F5C92E;       /* accento della maiolica */
+
+  --font-titoli: "Coustard", Georgia, serif;
+  --font-testo: "Montserrat", Arial, sans-serif;
+
+  --larghezza-max: 1200px;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-testo);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--crema);
+  background-color: var(--blu);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--giallo);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* ---------- Bordi in maiolica ---------- */
+.bordo-maiolica {
+  height: 68px;
+  background-image: url("../img/maiolica-bordo.webp");
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  flex-shrink: 0;
+}
+
+/* ---------- Intestazione ---------- */
+.header {
+  width: 100%;
+  max-width: var(--larghezza-max);
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 34px;
+  height: auto;
+}
+
+.brand-name {
+  font-family: var(--font-titoli);
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ocra);
+}
+
+.nav-list {
+  display: flex;
+  gap: 2.25rem;
+}
+
+.nav-list a {
+  font-weight: 600;
+  text-decoration: none;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.nav-list a:hover {
+  border-bottom-color: var(--ocra);
+}
+
+/* ---------- Icone social ---------- */
+.social-list {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.social-list a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid var(--crema);
+  border-radius: 50%;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.social-list a:hover {
+  background-color: var(--crema);
+  color: var(--blu);
+}
+
+.social-list svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  flex: 1;
+  width: 100%;
+  max-width: var(--larghezza-max);
+  margin: 0 auto;
+  padding: 2rem 2rem 3rem;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+.sopratitolo {
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--giallo);
+}
+
+.titolo {
+  margin: 0;
+  font-family: var(--font-titoli);
+  font-size: 4.75rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--ocra);
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.titolo-claim {
+  display: block;
+  margin-top: 1.25rem;
+  font-size: 2.1rem;
+  line-height: 1.2;
+  text-transform: none;
+  color: var(--crema);
+}
+
+.titolo-claim em {
+  font-style: normal;
+  color: var(--ocra);
+}
+
+.mission {
+  max-width: 34rem;
+  margin: 1.5rem 0 2.25rem;
+}
+
+.azioni {
+  display: flex;
+  gap: 1rem;
+}
+
+/* ---------- Bottoni ---------- */
+.bottone {
+  display: inline-block;
+  padding: 0.95rem 1.8rem;
+  border: 2px solid var(--ocra);
+  border-radius: 6px;
+  background-color: var(--ocra);
+  color: var(--blu-scuro);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.bottone:hover {
+  background-color: var(--ocra-chiaro);
+  border-color: var(--ocra-chiaro);
+}
+
+.bottone-secondario {
+  background-color: transparent;
+  border-color: var(--crema);
+  color: var(--crema);
+}
+
+.bottone-secondario:hover {
+  background-color: var(--crema);
+  border-color: var(--crema);
+  color: var(--blu);
+}
+
+/* ---------- Logo grande ---------- */
+.hero-logo {
+  margin: 0;
+  justify-self: center;
+}
+
+.hero-logo img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.35));
+}
+
+/* ---------- Fascia degli impegni ---------- */
+.impegni {
+  background-color: var(--blu-scuro);
+}
+
+.impegni-lista {
+  max-width: var(--larghezza-max);
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.impegni-lista li {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  border-left: 3px solid var(--ocra);
+  font-size: 0.9rem;
+}
+
+.impegni-lista strong {
+  font-size: 1rem;
+  color: var(--ocra);
+}
+
+.impegni-lista a {
+  font-weight: 600;
+}
+
+/* ---------- Schermi desktop più piccoli ---------- */
+@media (max-width: 1100px) {
+  .nav-list {
+    gap: 1.25rem;
+  }
+
+  .titolo {
+    font-size: 3.75rem;
+  }
+
+  .impegni-lista {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------- Adattamento minimo per smartphone ---------- */
+@media (max-width: 760px) {
+  .header {
+    flex-wrap: wrap;
+    padding: 1.25rem 1rem;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+  }
+
+  .nav-list {
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 1.5rem 1rem 2.5rem;
+  }
+
+  .hero-logo {
+    order: -1;
+  }
+
+  .hero-logo img {
+    max-width: 150px;
+  }
+
+  .titolo {
+    font-size: 2.75rem;
+  }
+
+  .titolo-claim {
+    font-size: 1.5rem;
+  }
+
+  .azioni {
+    flex-wrap: wrap;
+  }
+
+  .impegni-lista {
+    grid-template-columns: 1fr;
+    padding: 1.5rem 1rem;
+    gap: 1.25rem;
+  }
+}
