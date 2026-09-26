@@ -4,6 +4,10 @@ Progetto del corso **Introduzione allo Sviluppo** (Master Digital Marketing e Ag
 
 Parte superiore della pagina web di Hotel Pomelia, eco hotel di famiglia a Ragusa, realizzata in **HTML e CSS** e progettata per desktop.
 
+**Versione online:** https://emacaluso-master.github.io/hotel-pomelia/
+
+Per vederla in locale: estrarre lo zip e aprire `index.html` con un browser (Chrome, Safari, Firefox).
+
 ## Cosa contiene
 - Nome e logo dell'azienda (logo creato in Canva: cuore decorato con motivi della maiolica siciliana)
 - Menu di navigazione e link ai profili social (Facebook, Instagram, Pinterest)
@@ -15,8 +19,9 @@ Parte superiore della pagina web di Hotel Pomelia, eco hotel di famiglia a Ragus
 ```
 index.html
 css/style.css
-img/logo-pomelia.webp
-img/maiolica-bordo.webp
+img/logo-hotel-pomelia.png
+img/logo-cuore.png
+img/maiolica-bordo.jpg
 ```
 
 ## Strumenti
